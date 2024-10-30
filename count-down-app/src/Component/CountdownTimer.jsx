@@ -50,16 +50,16 @@ const CountdownTimer = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        // Allow empty input (user can delete all digits)
+        
         if (value === '') {
             setTime((prevTime) => ({
                 ...prevTime,
-                [name]: '', // Set the value to empty string
+                [name]: '', 
             }));
             return;
         }
 
-        // Limit input values to a maximum of 99
+        
         const numValue = Math.max(0, Math.min(value, 99));
         setTime((prevTime) => ({
             ...prevTime,
@@ -69,8 +69,11 @@ const CountdownTimer = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+              <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500 shadow-lg">
+                Welcome to Countdown 
+            </h1>
             <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500 shadow-lg">
-                <span role="img" aria-label="timer" className="mr-2">⏳</span> Countdown Timer
+                <span role="img" aria-label="timer" className="mr-2">⏳</span> Countdown Starts
             </h1>
             
             <div className="flex space-x-4 mb-8">

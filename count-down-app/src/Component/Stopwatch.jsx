@@ -25,9 +25,13 @@ const Stopwatch = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+              <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500 shadow-lg">
+                Your Time Start Now
+            </h1>
             <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500 shadow-lg">
                 <span role="img" aria-label="stopwatch" className="mr-2">⏱️</span> Stopwatch
             </h1>
+            
             <div className="text-6xl font-extrabold mb-10">
                 {new Date(time).toISOString().slice(11, 19)}
             </div>
