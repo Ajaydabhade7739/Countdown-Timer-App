@@ -1,11 +1,10 @@
-import React from "react";
+// import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Component/Home";
 import CountdownTimer from "./Component/CountdownTimer";
 import Stopwatch from "./Component/Stopwatch";
 import Alarm from "./Component/Alarm";
-import './index.css'; // Ensure Tailwind is imported here
-
+import './index.css'; 
 function App() {
     return (
       

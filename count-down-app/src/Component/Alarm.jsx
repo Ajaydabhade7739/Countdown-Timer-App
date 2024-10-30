@@ -1,6 +1,4 @@
-// src/Components/Alarm.jsx
-
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Alarm = () => {
@@ -18,7 +16,6 @@ const Alarm = () => {
             setIsAlarmSet(true);
             setIsAlarmRinging(false);
 
-            // Clear any previous timeout
             if (alarmTimeout) clearTimeout(alarmTimeout);
 
             const [hours, minutes] = alarmTime.split(":").map(Number);
@@ -46,6 +43,12 @@ const Alarm = () => {
         if (alarmTimeout) clearTimeout(alarmTimeout);
     };
 
+    useEffect(() => {
+        return () => {
+            if (alarmTimeout) clearTimeout(alarmTimeout);
+        };
+    }, [alarmTimeout]);
+
     return (
         <div className="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
             <h1 className="text-5xl font-bold mb-6">Alarm</h1>
@@ -72,6 +75,7 @@ const Alarm = () => {
                 </button>
             </div>
             {isAlarmRinging && <div className="text-6xl font-bold mt-6">🔔 Alarm Ringing!</div>}
+            {isAlarmSet && <div className="text-lg mt-4">Alarm is set for {alarmTime}</div>}
             <Link
                 to="/"
                 className="mt-10 text-blue-400 hover:underline transition-transform transform hover:scale-110 text-lg"
