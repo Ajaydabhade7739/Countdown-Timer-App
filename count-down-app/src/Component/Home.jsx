@@ -1,36 +1,33 @@
-// src/Components/Home.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-        <div className="flex-row items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white ">
-            <h1 className="text-5xl font-bold mb-8">Welcome to the Timer App</h1>
-            <div className="">
-            <div className="space-y-4 ">
-                <div className="space-x-25 ">
+        <div className="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-r from-purple-900 to-indigo-900 text-white mr-10">
+            <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500 shadow-lg">
+                Welcome to the Timer App
+            </h1>
+            <div className="space-y-4">
                 <Link
                     to="/countdown"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                    className="bg-gradient-to-r from-blue-500 to-blue-700 hover:bg-blue-700 text-white px-8 py-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
                 >
                     Countdown Timer
                 </Link>
-                </div>
+                
                 <Link
                     to="/stopwatch"
-                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                    className="bg-gradient-to-r from-green-500 to-green-700 hover:bg-green-700 text-white px-8 py-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
                 >
                     Stopwatch
                 </Link>
+                
                 <Link
                     to="/alarm"
-                    className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                    className="bg-gradient-to-r from-red-500 to-red-700 hover:bg-red-700 text-white px-8 py-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
                 >
                     Alarm
                 </Link>
-               
-            </div>
             </div>
         </div>
     );

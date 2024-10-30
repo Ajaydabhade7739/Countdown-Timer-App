@@ -1,11 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: [
-    "./index.html", // Ensure your main HTML file is included
-    "./src/**/*.{js,jsx,ts,tsx}", // Include paths to your components
-  ],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+      extend: {},
+  },
+  variants: {
+      extend: {},
   },
   plugins: [],
-}
+};
